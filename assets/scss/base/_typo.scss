@@ -38,37 +38,37 @@ select {
 
 h1,
 .h1 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h1;
 }
 
 h2,
 .h2 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h2;
 }
 
 h3,
 .h3 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h3;
 }
 
 h4,
 .h4 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h4;
 }
 
 h5,
 .h5 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h5;
 }
 
 h6,
 .h6 {
-    @include font-text-bold;
+    @include font-text-display;
     @include text-h6;
 }
 
@@ -125,4 +125,8 @@ a:focus,
 a:visited,
 a:hover {
     text-decoration: none;
+}
+
+.menu li a{
+    @include font-text-mono;
 }

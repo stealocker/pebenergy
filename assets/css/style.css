@@ -97,17 +97,17 @@
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url("../fonts/RedHatDisplay-VariableFont_wght.tff") format("tff");
+  src: url("../fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
   font-family: "Red Hat Mono";
-  src: url("../fonts/RedHatMono-VariableFont_wght.tff") format("tff");
+  src: url("../fonts/RedHatMono-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
   font-family: "Red Hat Text";
-  src: url("../fonts/RedHatText-VariableFont_wght.tff") format("tff");
+  src: url("../fonts/RedHatText-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
 }
 .invisible,
@@ -266,10 +266,10 @@ li,
 td,
 address,
 a {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -290,18 +290,18 @@ label,
 input,
 textarea,
 select {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 h1,
 .h1 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 9rem;
   margin-top: 0;
@@ -310,8 +310,8 @@ h1,
 
 h2,
 .h2 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 7rem;
   margin-top: 1.85em;
@@ -320,8 +320,8 @@ h2,
 
 h3,
 .h3 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 5rem;
   margin-top: 1.85em;
@@ -330,8 +330,8 @@ h3,
 
 h4,
 .h4 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 3.5rem;
   margin-top: 1.85em;
@@ -340,8 +340,8 @@ h4,
 
 h5,
 .h5 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 2.8rem;
   margin-top: 1.85em;
@@ -350,8 +350,8 @@ h5,
 
 h6,
 .h6 {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Display", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 2.2rem;
   margin-top: 1.85em;
@@ -381,7 +381,7 @@ ul {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "TT Travels", Arial, sans-serif;
+  font-family: "Red Hat Mono", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -391,7 +391,7 @@ ul {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "TT Travels", Arial, sans-serif;
+  font-family: "Red Hat Mono", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -401,20 +401,20 @@ ul {
   line-height: 1;
   margin-top: 0.7em;
   margin-bottom: 0.7em;
-  font-family: "TT Travels", Arial, sans-serif;
+  font-family: "Red Hat Mono", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 .font-regular {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 .font-text-bold {
-  font-family: ">>FONT NAME<<", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -438,6 +438,12 @@ a:focus,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+.menu li a {
+  font-family: "Red Hat Mono", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,
@@ -618,8 +624,7 @@ input {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  height: 60px;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 #site-header .site-header__container .site-branding {
   grid-area: logo;
@@ -638,11 +643,24 @@ input {
   display: flex;
   gap: 4rem;
   justify-content: flex-end;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 #site-header .site-header__container .site-navigation-wrapper .navigation-desktop ul li {
   margin: 0;
+}
+#site-header .site-header__container .site-navigation-wrapper .navigation-desktop ul li a {
+  color: black;
+}
+#site-header .site-header__container .site-navigation-wrapper .navigation-desktop ul li.menulink--background {
+  background-color: #000647;
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+#site-header .site-header__container .site-navigation-wrapper .navigation-desktop ul li.menulink--background a {
+  color: white;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
