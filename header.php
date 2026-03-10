@@ -22,10 +22,11 @@
     <?php wp_body_open(); ?>
     <!-- start #page -->
     <div id="page" class="site">
-        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'lescustom'); ?></a>
+        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'pebenergy'); ?></a>
         <!-- start #site-header -->
         <header id="site-header" class="site-header">
-            <div class="site-header__container grid content-container">
+            <div class="content-container">
+            <div class="site-header__container grid">
                 <!-- start .site-branding -->
                 <div class="site-branding">
                     <?php 
@@ -54,11 +55,22 @@
                             ));
                             ?>
                         </nav>
-                        <a class="skip-link screen-reader-text accessibility--menu-close" onkeydown="menuToggleKeyDown(event)" href=""><?php echo __('Menü schließen', 'lescustom'); ?></a>
+                        <a class="skip-link screen-reader-text accessibility--menu-close" onkeydown="menuToggleKeyDown(event)" href=""><?php echo __('Menü schließen', 'pebenergy'); ?></a>
                     </div>
                     <!-- end .navigation-overlay -->
+                     <div class="navigation-desktop">
+                        <nav id="site-navigation-desktop" class="site-navigation">
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'menu-main',
+                                'menu_id' => 'primary-menu',
+                            ));
+                            ?>
+                        </nav>
+                        </div>
                 </div>
                 <!-- end .site-navigation-wrapper -->
+            </div>
             </div>
         </header>
         <!-- end #site-header -->

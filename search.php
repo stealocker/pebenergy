@@ -12,11 +12,11 @@ get_header();
     <!-- start .page-main-content-container -->
     <div id="page-main-content-container" class="content-container top-bottom-container template--search">
         <h1>
-            <?php echo __('Suche', 'lescustom'); ?>
+            <?php echo __('Suche', 'pebenergy'); ?>
         </h1>
         <!-- start .search-form-wrapper -->
         <div class="search-form-wrapper">
-            <h2><?php echo __('Wonach möchtest du suchen?', 'lescustom'); ?></h2>
+            <h2><?php echo __('Wonach möchtest du suchen?', 'pebenergy'); ?></h2>
             <?php get_search_form(); ?>
         </div>
         <!-- end .search-form-wrapper -->
@@ -41,9 +41,9 @@ get_header();
                 }
             } else {
                 ?>
-                <h2><?php echo __('Nichts zu finden', 'lescustom'); ?></h2>
+                <h2><?php echo __('Nichts zu finden', 'pebenergy'); ?></h2>
                 <div class="alert alert-info">
-                    <p><?php echo __('Sorry, wir konnten leider nichts finden', 'lescustom'); ?></p>
+                    <p><?php echo __('Sorry, wir konnten leider nichts finden', 'pebenergy'); ?></p>
                 </div>
             <?php } ?>
         </div>

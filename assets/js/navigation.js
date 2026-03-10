@@ -28,12 +28,12 @@
             button.setAttribute('aria-expanded', 'false');
             menu_overlay.classList.add('navigation-overlay--hidden');
             menu_overlay.classList.remove('navigation-overlay--open');
-            button_img.src = lescustom_scripts.templateUrl + "/assets/img/menu-open.svg";
+            button_img.src = pebenergy_scripts.templateUrl + "/assets/img/menu-open.svg";
         } else {
             button.setAttribute('aria-expanded', 'true');
             menu_overlay.classList.remove('navigation-overlay--hidden');
             menu_overlay.classList.add('navigation-overlay--open');
-            button_img.src = lescustom_scripts.templateUrl + "/assets/img/menu-close.svg";
+            button_img.src = pebenergy_scripts.templateUrl + "/assets/img/menu-close.svg";
         }
     });
 
@@ -48,12 +48,12 @@
                 button.setAttribute('aria-expanded', 'false');
                 menu_overlay.classList.add('navigation-overlay--hidden');
                 menu_overlay.classList.remove('navigation-overlay--open');
-                button_img.src = lescustom_scripts.templateUrl + "/assets/img/menu-open.svg";
+                button_img.src = pebenergy_scripts.templateUrl + "/assets/img/menu-open.svg";
             } else {
                 button.setAttribute('aria-expanded', 'true');
                 menu_overlay.classList.remove('navigation-overlay--hidden');
                 menu_overlay.classList.add('navigation-overlay--open');
-                button_img.src = lescustom_scripts.templateUrl + "/assets/img/menu-close.svg";
+                button_img.src = pebenergy_scripts.templateUrl + "/assets/img/menu-close.svg";
             }
         }
     }

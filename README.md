@@ -1,4 +1,4 @@
-# lescustom --- Personal Custom Base WP Theme
+# pebenergy --- Personal Custom Base WP Theme
 
 A lightweight, opinionated base theme for WordPress projects. Provides a
 clean starter layout, essential page templates, asset bundling (SCSS /
@@ -40,7 +40,7 @@ foundation.
 ### Installation
 
 ``` bash
-git clone https://github.com/stealocker/lescustom.git lescustom
+git clone https://github.com/stealocker/pebenergy.git pebenergy
 ```
 
 (Optional) Compile SCSS:
@@ -56,7 +56,7 @@ template parts as needed.
 
 ## Theme Structure
 
-    lescustom/
+    pebenergy/
     ├── assets/
     │   ├── scss/
     │   ├── css/
@@ -84,7 +84,7 @@ Extend SCSS, add templates, use template parts, modify JS, etc.
 Example:
 
 ``` php
-<?php echo __('STRING', 'lescustom'); ?>
+<?php echo __('STRING', 'pebenergy'); ?>
 ```
 
 ## Contributing

@@ -19,7 +19,7 @@ $footer_text = get_theme_mod('footer_settings_text');
             if (the_custom_logo()) {
                 the_custom_logo();
             } else { ?>
-                <a href="<?php echo home_url(); ?>"><?php echo __('Startseite', 'lescustom'); ?></a>
+                <a href="<?php echo home_url(); ?>"><?php echo __('Startseite', 'pebenergy'); ?></a>
             <?php } ?>
         </div>
         <!-- end .footer__site-branding -->

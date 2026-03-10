@@ -1,6 +1,15 @@
-/* @font-face {
-    font-family: ">>FONT NAME<<";
-    src: url("../fonts/>>FONT NAME<<.woff2") format("woff2"), url("../fonts/>>FONT NAME<<.woff") format("woff");
-    font-weight: normal;
+ @font-face {
+    font-family: "Red Hat Display";
+    src: url("../fonts/RedHatDisplay-VariableFont_wght.tff") format("tff");
     font-style: normal;
-} */
+} 
+ @font-face {
+    font-family: "Red Hat Mono";
+    src: url("../fonts/RedHatMono-VariableFont_wght.tff") format("tff");
+    font-style: normal;
+} 
+ @font-face {
+    font-family: "Red Hat Text";
+    src: url("../fonts/RedHatText-VariableFont_wght.tff") format("tff");
+    font-style: normal;
+} 

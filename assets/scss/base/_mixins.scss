@@ -106,20 +106,26 @@
 }
 
 @mixin font-text-regular() {
-    font-family: ">>FONT NAME<<", Arial, sans-serif;
-    font-weight: normal;
+    font-family: "Red Hat Text", Arial, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
-@mixin font-text-emotional() {
-    font-family: "TT Travels", Arial, sans-serif;
+@mixin font-text-mono() {
+    font-family: "Red Hat Mono", Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
 }
 
 @mixin font-text-bold() {
-    font-family: ">>FONT NAME<<", Arial, sans-serif;
-    font-weight: bold;
+    font-family: "Red Hat Text", Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin font-text-display() {
+    font-family: "Red Hat Display", Arial, sans-serif;
+    font-weight: 700;
     font-style: normal;
 }
 

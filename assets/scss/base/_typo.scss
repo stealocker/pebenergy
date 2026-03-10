@@ -90,17 +90,17 @@ ul {
 
 .text-hero {
     @include text-hero;
-    @include font-text-emotional;
+    @include font-text-mono;
 }
 
 .text-hero-small {
     @include text-hero-small;
-    @include font-text-emotional;
+    @include font-text-mono;
 }
 
 .text-hero-mini {
     @include text-hero-mini;
-    @include font-text-emotional;
+    @include font-text-mono;
 }
 
 

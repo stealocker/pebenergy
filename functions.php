@@ -6,7 +6,7 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function lescustom_setup()
+function pebenergy_setup()
 {
 
 	// Add default posts and comments RSS feed links to head.
@@ -30,7 +30,7 @@ function lescustom_setup()
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-main' => esc_html__('Primary', 'lescustom'),
+			'menu-main' => esc_html__('Primary', 'pebenergy'),
 			'footer-menu-left' => __('Footer Links')
 		)
 	);
@@ -56,7 +56,7 @@ function lescustom_setup()
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'lescustom_custom_background_args',
+			'pebenergy_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -82,27 +82,27 @@ function lescustom_setup()
 		)
 	);
 }
-add_action('after_setup_theme', 'lescustom_setup');
+add_action('after_setup_theme', 'pebenergy_setup');
 
 /**
  * Enqueue scripts and styles.
  */
-function lescustom_scripts()
+function pebenergy_scripts()
 {
 	if ( ! defined( '_S_VERSION' ) ) {
 		define( '_S_VERSION', '1.0.0' );
 	}
-	wp_enqueue_style('lescustom-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_enqueue_script('lescustom-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), _S_VERSION, true);
-	wp_localize_script('lescustom-scripts', 'WPURLS', array( 'siteurl' => get_option('siteurl') ));
-	wp_enqueue_script('lescustom-navigation-script', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true);
-	wp_localize_script('lescustom-navigation-script', 'lescustom_scripts', array('templateUrl' => get_stylesheet_directory_uri()));
+	wp_enqueue_style('pebenergy-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_enqueue_script('pebenergy-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), _S_VERSION, true);
+	wp_localize_script('pebenergy-scripts', 'WPURLS', array( 'siteurl' => get_option('siteurl') ));
+	wp_enqueue_script('pebenergy-navigation-script', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true);
+	wp_localize_script('pebenergy-navigation-script', 'pebenergy_scripts', array('templateUrl' => get_stylesheet_directory_uri()));
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 }
-add_action('wp_enqueue_scripts', 'lescustom_scripts');
+add_action('wp_enqueue_scripts', 'pebenergy_scripts');
 
 /**
  * Customizer Code HERE
