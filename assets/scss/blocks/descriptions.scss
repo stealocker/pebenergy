@@ -1,0 +1,88 @@
+.descriptions {
+    grid-template-areas: "overview overview overview overview overview space detail detail detail detail detail detail";
+
+    &__overview {
+        grid-area: overview;
+
+        .descriptions__overview__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            p {
+                margin: 0;
+            }
+
+            .line {
+                height: 2px;
+                width: 100%;
+                margin-top: 3px;
+            }
+
+            &:nth-child(4n + 1) {
+                .line {
+                    background-color: $color-turquoise;
+                }
+            }
+
+            &:nth-child(4n + 2) {
+                .line {
+                    background-color: $color-lilac;
+                }
+            }
+
+            &:nth-child(4n + 3) {
+                .line {
+                    background-color: $color-blue;
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                .line {
+                    background-color: $color-yellow;
+                }
+            }
+
+            &--active {
+                flex-direction: row-reverse;
+                margin-right: -4rem;
+
+                p {
+                    font-variation-settings: "wght" 700;
+                }
+            }
+
+            &:hover{
+                p {
+                    font-variation-settings: "wght" 600;
+                }
+            }
+        }
+    }
+
+    &__detail {
+        grid-area: detail;
+
+        .descriptions__detail__item {
+            display: none;
+
+            .image-wrapper {
+                aspect-ratio: 24 / 9;
+                border-radius: 8px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &--active {
+                display: block;
+            }
+        }
+    }
+}
