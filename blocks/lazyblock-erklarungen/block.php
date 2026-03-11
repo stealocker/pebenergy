@@ -5,11 +5,17 @@
         <div class="erklaerungen grid">
             <div class="erklaerungen__overview">
                 <ul>
-                    <?php foreach ($items as $item) : ?>
-                        <li>
+                    <?php
+                    $id = 0;
+                    foreach ($items as $item) : ?>
+                        <li data-id="<?php echo $id ?>">
                             <?php echo esc_html($item['headline']); ?>
                         </li>
-                    <?php endforeach; ?>
+                    <?php
+                        $id++;
+                    endforeach;
+
+                    $id = 0; ?>
                 </ul>
             </div>
             <div class="erklaerungen__detail">
@@ -21,7 +27,10 @@
                         <p class="text-bigger"><?php echo esc_html($item['abstract']); ?></p>
                         <?php echo $item['text']; ?>
                     </div>
-                <?php endforeach; ?>
+                <?php
+                    $id++;
+                endforeach;
+                $id = 0; ?>
             </div>
         </div>
     <?php endif; ?>
