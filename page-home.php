@@ -1,8 +1,10 @@
 <?php
 /**
- * The Template for displaying Single Posts
+ * Template Name: Startseite
  * 
- * This is the template that displays all single posts by default.
+ * The Template for displaying the home page
+ * 
+ * This is the template that displays the home page default.
  */
 
  get_header();
@@ -11,11 +13,8 @@
 <!-- start #primary -->
 <main id="primary" class="site-main">
     <!-- start .page-main-content-container -->
-	<div id="page-main-content-container" class="content-container top-bottom-container template--single">
+	<div id="page-main-content-container" class="content-container top-bottom-container template--page">
     <?php
-		echo '<h1>';
-		the_title();
-		echo '</h1>';
 			the_content();
 		?>
 	</div>

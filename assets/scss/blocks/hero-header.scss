@@ -1,0 +1,30 @@
+.hero-header{
+    grid-template-areas: "text text text text text text text space img img img img";
+    &__content{
+        grid-area: text;
+        align-self: center;
+h1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    span{
+        align-self: flex-end;
+    }
+}
+.hero-header__buttonwrapper{
+    width: 100%;
+    .button{
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+    }
+    &__img{
+        grid-area: img;
+        img{
+            aspect-ratio: 9 / 12;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+}

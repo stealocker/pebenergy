@@ -130,3 +130,14 @@ a:hover {
 .menu li a{
     @include font-text-mono;
 }
+
+.hero-header__headline--span{
+    @include text-h1;
+    @include font-text-mono;
+    font-weight:500;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.3em;
+    display: block;
+}
+

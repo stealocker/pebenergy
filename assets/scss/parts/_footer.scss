@@ -1,11 +1,15 @@
 #site-footer {
     padding-top: $spacing-l;
-    padding-bottom: $spacing-l;
+    padding-bottom: $spacing-xs;
     .footer-wrapper {
         width: 100%;
         grid-template-columns: 20% auto;
-        grid-template-areas: "logo nav" "logo text";
+        grid-template-areas: "logo nav1 nav2";
         gap: $spacing-s;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        padding: 1rem 2rem;
         .footer__site-branding {
             grid-area: logo;
         }

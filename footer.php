@@ -12,7 +12,8 @@ $footer_text = get_theme_mod('footer_settings_text');
 
 <!-- start #site-footer -->
 <footer id="site-footer" class="site-footer">
-    <div class="footer-wrapper content-container grid">
+    <div class="content-container">
+    <div class="footer-wrapper grid">
         <!-- start .footer__site-branding -->
         <div class="footer__site-branding">
             <?php
@@ -39,6 +40,7 @@ $footer_text = get_theme_mod('footer_settings_text');
         </div>
         <!-- end .footer__text -->
     </div>
+        </div>
 </footer>
 <!-- end #site-footer -->
 </div>

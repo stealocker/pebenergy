@@ -1,9 +1,10 @@
 #site-header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     padding-top: $spacing-xs;
     padding-bottom: $spacing-s;
     width: 100%;
-
+    z-index: 9999;
     .site-header__container {
         width: 100%;
         grid-template-columns: 20% auto auto;
@@ -22,6 +23,14 @@
 
         .site-navigation-wrapper {
             grid-area: nav;
+
+            ul li a:hover{
+                text-decoration: underline;
+                text-decoration-color: $color-turquoise;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 0.4em;
+                @include transition-none;
+            }
 
             #menu-toggle {
                 display: none;
@@ -50,7 +59,7 @@
                         padding: 0.8rem;
                        a{
                         color: white;
-                        font-weight:600;
+                            font-variation-settings: "wght" 600;
                        } 
                     }
                 }
