@@ -1,0 +1,106 @@
+.emotional-facts {
+    grid-template-areas: "headline headline headline headline headline headline space1 space1 space1 fact1 fact1 fact1"
+        "space2 space2 space2 space2 space2 fact2 fact2 fact2 img1 img1 img1 img1"
+        "space3 fact3 fact3 fact3 space4 space4 space4 space4 img1 img1 img1 img1"
+        "img2 img2 img2 img2 space5 space5 fact4 fact4 fact4 sapce6 sapce6 sapce6"
+        "img2 img2 img2 img2 space7 space7 space7 space7 space7 space7 fact5 fact5";
+    background: url(../img/emotional-icons.svg);
+    background-repeat: no-repeat;
+    background-position: 0 18rem;
+    background-size: 75%;
+
+    &__headline {
+        grid-area: headline;
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+
+    &__fact {
+        align-self: center;
+        position: relative;
+
+        .text-super {
+            margin: 0;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            width: 9rem;
+            height: 9rem;
+            top: -1rem;
+            left: -3rem;
+            z-index: -1;
+        }
+
+        .text-bigger {
+            margin: 0;
+        }
+
+        &:nth-child(2) {
+            grid-area: fact1;
+
+            &::before {
+                background-color: $color-turquoise;
+            }
+        }
+
+        &:nth-child(3) {
+            grid-area: fact2;
+
+            &::before {
+                background-color: $color-lilac;
+            }
+        }
+
+        &:nth-child(4) {
+            grid-area: fact3;
+
+            &::before {
+                background-color: $color-blue;
+            }
+        }
+
+        &:nth-child(5) {
+            grid-area: fact4;
+
+            &::before {
+                background-color: $color-yellow;
+            }
+        }
+
+        &:nth-child(6) {
+            grid-area: fact5;
+
+            &::before {
+                background-color: $color-blue;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:nth-child(7) {
+            grid-area: img1;
+            aspect-ratio: 1 / 1;
+        }
+
+        &:nth-child(8) {
+            grid-area: img2;
+            aspect-ratio: 20 / 9;
+        }
+    }
+}

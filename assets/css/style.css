@@ -322,7 +322,7 @@ h2,
   font-family: "Red Hat Display", Arial, sans-serif;
   font-variation-settings: "wght" 700;
   font-style: normal;
-  font-size: 4.6rem;
+  font-size: 3.6rem;
   margin-top: 1.2em;
   margin-bottom: 0.7em;
 }
@@ -380,9 +380,12 @@ ul {
 }
 
 .text-super {
-  font-size: 9rem;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  font-size: 6rem;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-variation-settings: "wght" 600;
+  font-style: normal;
 }
 
 .text-hero {
@@ -462,6 +465,20 @@ a:hover {
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.3em;
   display: block;
+}
+
+.emotional-facts__headline--span {
+  font-size: 3.6rem;
+  margin-top: 1.2em;
+  margin-bottom: 0.7em;
+  font-family: "Red Hat Mono", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.3em;
+  display: block;
+  margin: 0;
 }
 
 .link--arrow {
@@ -950,6 +967,8 @@ input {
 
 .descriptions {
   grid-template-areas: "overview overview overview overview overview space detail detail detail detail detail detail";
+  margin-top: 12rem;
+  margin-bottom: 8rem;
 }
 .descriptions__overview {
   grid-area: overview;
@@ -1013,6 +1032,89 @@ input {
 }
 .descriptions__detail .descriptions__detail__item--active {
   display: block;
+}
+
+.emotional-facts {
+  grid-template-areas: "headline headline headline headline headline headline space1 space1 space1 fact1 fact1 fact1" "space2 space2 space2 space2 space2 fact2 fact2 fact2 img1 img1 img1 img1" "space3 fact3 fact3 fact3 space4 space4 space4 space4 img1 img1 img1 img1" "img2 img2 img2 img2 space5 space5 fact4 fact4 fact4 sapce6 sapce6 sapce6" "img2 img2 img2 img2 space7 space7 space7 space7 space7 space7 fact5 fact5";
+  background: url(../img/emotional-icons.svg);
+  background-repeat: no-repeat;
+  background-position: 0 18rem;
+  background-size: 75%;
+}
+.emotional-facts__headline {
+  grid-area: headline;
+}
+.emotional-facts__headline h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.emotional-facts__fact {
+  align-self: center;
+  position: relative;
+}
+.emotional-facts__fact .text-super {
+  margin: 0;
+}
+.emotional-facts__fact::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  top: -1rem;
+  left: -3rem;
+  z-index: -1;
+}
+.emotional-facts__fact .text-bigger {
+  margin: 0;
+}
+.emotional-facts__fact:nth-child(2) {
+  grid-area: fact1;
+}
+.emotional-facts__fact:nth-child(2)::before {
+  background-color: #73F8BE;
+}
+.emotional-facts__fact:nth-child(3) {
+  grid-area: fact2;
+}
+.emotional-facts__fact:nth-child(3)::before {
+  background-color: #C8BBE9;
+}
+.emotional-facts__fact:nth-child(4) {
+  grid-area: fact3;
+}
+.emotional-facts__fact:nth-child(4)::before {
+  background-color: #72F9F5;
+}
+.emotional-facts__fact:nth-child(5) {
+  grid-area: fact4;
+}
+.emotional-facts__fact:nth-child(5)::before {
+  background-color: #FFF77C;
+}
+.emotional-facts__fact:nth-child(6) {
+  grid-area: fact5;
+}
+.emotional-facts__fact:nth-child(6)::before {
+  background-color: #72F9F5;
+}
+.emotional-facts__img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.emotional-facts__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.emotional-facts__img:nth-child(7) {
+  grid-area: img1;
+  aspect-ratio: 1/1;
+}
+.emotional-facts__img:nth-child(8) {
+  grid-area: img2;
+  aspect-ratio: 20/9;
 }
 
 /*# sourceMappingURL=style.css.map */
