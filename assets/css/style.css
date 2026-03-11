@@ -987,6 +987,9 @@ input {
 .descriptions__overview .descriptions__overview__item--active p {
   font-variation-settings: "wght" 700;
 }
+.descriptions__overview .descriptions__overview__item:hover {
+  cursor: pointer;
+}
 .descriptions__overview .descriptions__overview__item:hover p {
   font-variation-settings: "wght" 600;
 }
