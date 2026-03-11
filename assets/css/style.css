@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .text-white,
 .text-white:before {
   color: #FFFFFF;
@@ -321,8 +322,8 @@ h2,
   font-family: "Red Hat Display", Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 7rem;
-  margin-top: 1.85em;
+  font-size: 4.6rem;
+  margin-top: 1.2em;
   margin-bottom: 0.7em;
 }
 
@@ -466,6 +467,35 @@ a:hover {
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.3em;
   display: block;
+}
+
+.link--arrow {
+  font-family: "Red Hat Mono", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  text-align: right;
+  display: block;
+  margin-right: 2.1em;
+}
+.link--arrow::after {
+  content: "⭢";
+  display: inline-block;
+  margin-left: 1em;
+  margin-top: 0.1em;
+  transform: scale(1.5);
+  position: absolute;
+}
+.link--arrow:hover::after {
+  margin-left: 1.5em;
 }
 
 *,
@@ -840,11 +870,27 @@ input {
   object-fit: cover;
 }
 
+.circle-diagram {
+  grid-template-areas: "text text text text text space circle circle circle circle circle circle";
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.circle-diagram__text {
+  grid-area: text;
+}
+.circle-diagram__text a {
+  margin-top: 4rem;
+}
+.circle-diagram__circle {
+  grid-area: circle;
+  align-self: center;
+  margin-top: 5rem;
+}
 .circle-diagram__circle .circle-widget {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 100%;
   font-family: sans-serif;
 }
 .circle-diagram__circle .circle {
@@ -891,9 +937,19 @@ input {
 }
 .circle-diagram__circle .label {
   display: none;
-  font-size: 24px;
-  border-bottom: 3px solid #b896c8;
+  font-size: 1.4rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Red Hat Mono", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+  text-decoration-color: #C8BBE9;
+  text-decoration-thickness: 2px;
   padding-bottom: 4px;
+  max-width: 20rem;
+  hyphens: auto;
 }
 .circle-diagram__circle .label.active {
   display: inline-block;

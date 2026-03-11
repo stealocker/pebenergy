@@ -126,3 +126,8 @@ function theme_footer_customizer($wp_customize)
 		'type'    => 'textarea',
 	));
 }
+
+function filter_site_upload_size_limit( $size ) {
+return 1024 * 1024 * 32;
+}
+add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
