@@ -1,0 +1,80 @@
+.showcases {
+    &__headline {}
+
+    &__content-wrapper {
+        align-items: start;
+        .showcases__content {
+            grid-column-end: span 4;
+            position: relative;
+            .showcases__content__img {
+                border-radius: 8px;
+                aspect-ratio: 9 / 12;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .showcases__content__additional {
+                    display: none;
+                    position: absolute;
+                    bottom: 2rem;
+                    top: auto;
+                    border-radius: 8px;
+                    background-color: white;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                    left: 2rem;
+                    right: 2rem;
+                    padding: 1rem;
+                }
+
+                &:hover {
+                    &::after{
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.3);
+                        }
+                    .showcases__content__additional {
+                        display: block;
+                        z-index: 2
+                    }
+                }
+            }
+
+            &--cta {
+                .showcases__content__img {
+                    border: 2px solid $color-lilac;
+                    background: linear-gradient(143.364deg, rgba(114, 249, 245, 30%) 0%, rgba(115, 248, 190, 30%) 43%, rgba(200, 187, 233, 30%) 100%);
+                    flex-direction: column;
+                    gap: 2rem;
+                    justify-content: space-between;
+                    padding: 4rem;
+                    padding-bottom: 2rem;
+                    h3{
+                        @include text-bigger;
+                        color: $color-darkblue;
+                    }
+                    .button{
+                        background: $color-lilac;
+                    }
+                                    &:hover {
+                    &::after{
+                        display: none;
+                    }
+                }
+                }
+            }
+
+
+        }
+    }
+}

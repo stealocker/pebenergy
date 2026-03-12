@@ -329,11 +329,10 @@ h2,
 
 h3,
 .h3 {
-  font-family: "Red Hat Display", Arial, sans-serif;
-  font-variation-settings: "wght" 700;
+  font-family: "Red Hat Mono", Arial, sans-serif;
   font-style: normal;
-  font-size: 5rem;
-  margin-top: 1.85em;
+  font-size: 1.4rem;
+  margin-top: 1.4em;
   margin-bottom: 0.7em;
 }
 
@@ -1115,6 +1114,73 @@ input {
 .emotional-facts__img:nth-child(8) {
   grid-area: img2;
   aspect-ratio: 20/9;
+}
+
+.showcases__content-wrapper {
+  align-items: start;
+}
+.showcases__content-wrapper .showcases__content {
+  grid-column-end: span 4;
+  position: relative;
+}
+.showcases__content-wrapper .showcases__content .showcases__content__img {
+  border-radius: 8px;
+  aspect-ratio: 9/12;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.showcases__content-wrapper .showcases__content .showcases__content__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.showcases__content-wrapper .showcases__content .showcases__content__img .showcases__content__additional {
+  display: none;
+  position: absolute;
+  bottom: 2rem;
+  top: auto;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  left: 2rem;
+  right: 2rem;
+  padding: 1rem;
+}
+.showcases__content-wrapper .showcases__content .showcases__content__img:hover::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.showcases__content-wrapper .showcases__content .showcases__content__img:hover .showcases__content__additional {
+  display: block;
+  z-index: 2;
+}
+.showcases__content-wrapper .showcases__content--cta .showcases__content__img {
+  border: 2px solid #C8BBE9;
+  background: linear-gradient(143.364deg, rgba(114, 249, 245, 0.3) 0%, rgba(115, 248, 190, 0.3) 43%, rgba(200, 187, 233, 0.3) 100%);
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 4rem;
+  padding-bottom: 2rem;
+}
+.showcases__content-wrapper .showcases__content--cta .showcases__content__img h3 {
+  font-size: 2rem;
+  margin-top: 2em;
+  margin-bottom: 1.4em;
+  color: #000647;
+}
+.showcases__content-wrapper .showcases__content--cta .showcases__content__img .button {
+  background: #C8BBE9;
+}
+.showcases__content-wrapper .showcases__content--cta .showcases__content__img:hover::after {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

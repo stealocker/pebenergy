@@ -50,7 +50,7 @@ h2,
 
 h3,
 .h3 {
-    @include font-text-display;
+    @include font-text-mono;
     @include text-h3;
 }
 
