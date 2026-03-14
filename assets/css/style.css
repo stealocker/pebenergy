@@ -666,6 +666,7 @@ button[disabled] {
 button--primary {
   background: linear-gradient(176deg, #72F9F5 0%, #73F8BE 70%, #C8BBE9 120%);
   padding: calc(1rem + 2px) 1.5rem;
+  border: none;
 }
 .button--primary:hover,
 button--primary:hover {
@@ -1185,6 +1186,75 @@ input {
 }
 .showcases__content-wrapper .showcases__content--cta .showcases__content__img:hover::after {
   display: none;
+}
+
+.team h2 {
+  grid-column: span 12;
+}
+.team__member-wrapper {
+  grid-column-end: span 12;
+  position: relative;
+  max-width: 100%;
+  margin: 4rem 0;
+}
+.team__member-wrapper .teammember {
+  grid-column-end: span 6;
+  border-radius: 8px;
+  position: relative;
+  max-width: 100%;
+}
+.team__member-wrapper .teammember--one {
+  grid-column-start: 1;
+  grid-template-areas: "content content content content content content img img img img img img";
+  margin-bottom: 4rem;
+}
+.team__member-wrapper .teammember--one .teammember__img-wrapper {
+  grid-column-start: 7;
+}
+.team__member-wrapper .teammember--one:hover {
+  grid-column-start: 1;
+}
+.team__member-wrapper .teammember--two {
+  grid-column-start: 7;
+  grid-template-areas: "img img img img img img content content content content content content";
+  margin-top: 4rem;
+}
+.team__member-wrapper .teammember--two .teammember__img-wrapper {
+  grid-column-start: 1;
+}
+.team__member-wrapper .teammember__img-wrapper {
+  grid-area: img;
+  aspect-ratio: 5/7;
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.team__member-wrapper .teammember__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team__member-wrapper .teammember__content-wrapper {
+  display: none;
+  grid-area: content;
+  padding: 2rem;
+}
+.team__member-wrapper .teammember:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.team__member-wrapper .teammember:hover .teammember__content-wrapper {
+  display: block;
+}
+.team__text {
+  grid-column: 3/span 8;
+}
+
+.contact h2 {
+  grid-column-end: span 12;
+}
+.contact__form {
+  grid-column: 2/span 10;
 }
 
 /*# sourceMappingURL=style.css.map */

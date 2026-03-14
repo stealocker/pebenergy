@@ -1,4 +1,4 @@
-<div class="emotional-facts grid">
+<section class="emotional-facts grid">
     <div class="emotional-facts__headline">
         <h2><?php echo esc_html($attributes['headline-one']); ?> <span class="emotional-facts__headline--span"><?php echo esc_html($attributes['headline-two']); ?></span> <?php echo esc_html($attributes['headline-three']); ?></h2>
     </div>
@@ -20,4 +20,4 @@
                 alt="<?php echo esc_attr($attributes['img-two']['alt']); ?>">
         </div>
     <?php endif; ?>
-</div>
+    </section>

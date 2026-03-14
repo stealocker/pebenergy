@@ -1,4 +1,4 @@
-<div class="hero-header grid">
+<section class="hero-header grid">
     <div class="hero-header__content">
     <h1><?php echo esc_html($attributes['headline-one']); ?> <span class="hero-header__headline--span"><?php echo esc_html($attributes['headline-two']); ?></span> <?php echo esc_html($attributes['headline-three']); ?></h1>
     <p class="text-bigger">
@@ -27,4 +27,4 @@
        </div>
 <?php endif; ?>
 
-</div>
+</section>

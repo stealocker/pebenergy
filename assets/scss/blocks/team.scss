@@ -1,0 +1,74 @@
+.team {
+    h2 {
+        grid-column: span 12;
+    }
+
+    &__member-wrapper {
+
+        grid-column-end: span 12;
+        position: relative;
+        max-width: 100%;
+        margin: 4rem 0;
+        .teammember {
+            grid-column-end: span 6;
+            border-radius: 8px;
+            position: relative;
+            max-width: 100%;
+
+            &--one {
+                grid-column-start: 1;
+                grid-template-areas: "content content content content content content img img img img img img";
+margin-bottom: 4rem;
+                .teammember__img-wrapper {
+                    grid-column-start: 7;
+                }
+
+                &:hover {
+                    grid-column-start: 1;
+                }
+            }
+
+            &--two {
+                grid-column-start: 7;
+                grid-template-areas: "img img img img img img content content content content content content";
+margin-top: 4rem;
+                .teammember__img-wrapper {
+                    grid-column-start: 1;
+                }
+            }
+
+            &__img-wrapper {
+                grid-area: img;
+                aspect-ratio: 5 / 7;
+                height: auto;
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__content-wrapper {
+                display: none;
+                grid-area: content;
+                padding: 2rem;
+            }
+
+            &:hover {
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+                .teammember__content-wrapper {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__text {
+        grid-column: 3 / span 8;
+    }
+}

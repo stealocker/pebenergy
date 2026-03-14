@@ -1,4 +1,4 @@
-<div class="circle-diagram grid">
+<section class="circle-diagram grid">
     <div class="circle-diagram__text">
         <h2><?php echo esc_html($attributes['headline']); ?></h2>
         <p class="text-bigger"><?php echo esc_html($attributes['subline']); ?></p>
@@ -35,4 +35,4 @@
     </div>
 
 
-</div>
+                </section>

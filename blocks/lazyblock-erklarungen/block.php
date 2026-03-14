@@ -2,7 +2,7 @@
     $items = $attributes['items'];
 
     if ($items) : ?>
-        <div class="descriptions grid">
+        <section class="descriptions grid">
             <div class="descriptions__overview">
                     <?php
                     $id = 0;
@@ -33,5 +33,5 @@
                 endforeach;
                 $id = 0; ?>
             </div>
-        </div>
+            </section>
     <?php endif; ?>

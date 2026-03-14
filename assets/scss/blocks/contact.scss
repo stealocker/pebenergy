@@ -1,0 +1,8 @@
+.contact{
+    h2{
+        grid-column-end: span 12;
+    }
+    &__form{
+        grid-column: 2 / span 10;
+    }
+}

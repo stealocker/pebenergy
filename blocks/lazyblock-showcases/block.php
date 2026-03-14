@@ -1,4 +1,4 @@
-<div class="showcases">
+<section class="showcases">
     <div class="showcases__headline">
         <h2><?php echo esc_html($attributes['headline']); ?></h2>
     </div>
@@ -28,4 +28,4 @@
         </div>
 
     </div>
-</div>
+</section>
