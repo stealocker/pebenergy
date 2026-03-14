@@ -218,7 +218,7 @@ img.avatar {
   }
 }
 .content-container {
-  max-width: 1720px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -278,7 +278,7 @@ a {
   font-family: "Red Hat Text", Arial, sans-serif;
   font-variation-settings: "wght" 400;
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -302,7 +302,7 @@ select {
   font-family: "Red Hat Text", Arial, sans-serif;
   font-variation-settings: "wght" 600;
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -373,7 +373,7 @@ ul {
 }
 
 .text-bigger {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-top: 2em;
   margin-bottom: 1.4em;
 }
@@ -792,7 +792,7 @@ input {
     padding: 21px 0;
   }
   #site-header .site-header__container .navigation-overlay #primary-menu li a {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: 2em;
     margin-bottom: 1.4em;
   }
@@ -948,7 +948,7 @@ input {
 }
 .circle-diagram__circle .label {
   display: none;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: "Red Hat Mono", Arial, sans-serif;
@@ -1176,7 +1176,7 @@ input {
   padding-bottom: 2rem;
 }
 .showcases__content-wrapper .showcases__content--cta .showcases__content__img h3 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-top: 2em;
   margin-bottom: 1.4em;
   color: #000647;
@@ -1255,6 +1255,122 @@ input {
 }
 .contact__form {
   grid-column: 2/span 10;
+}
+.contact__form *,
+.contact__form *::before,
+.contact__form *::after {
+  box-sizing: border-box;
+}
+.contact__form select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 1;
+}
+.contact__form select::-ms-expand {
+  display: none;
+}
+.contact__form select {
+  outline: none;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+.contact__form .select {
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+}
+.contact__form .select::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+}
+.contact__form input,
+.contact__form .select {
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.contact__form input[type=text], .contact__form input[type=email],
+.contact__form .select[type=text],
+.contact__form .select[type=email] {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  height: 2em;
+  transform: translateY(-1em);
+}
+.contact__form textarea {
+  display: block;
+  width: 80%;
+  margin: 3rem auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 2rem;
+}
+.contact__form p {
+  max-width: unset;
+  text-align: center;
+}
+.contact__form label {
+  font-size: 1.8rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Red Hat Text", Arial, sans-serif;
+  font-variation-settings: "wght" 400;
+  font-style: normal;
+  text-align: center;
+  display: inline;
+}
+.contact__form label.dsgvo {
+  text-align: center;
+}
+.contact__form label.dsgvo .checkmark {
+  border: 2px solid black;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+}
+.contact__form label.dsgvo input {
+  height: auto;
+  opacity: 0;
+}
+.contact__form label.dsgvo input + span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1em;
+  width: 1em;
+  margin: 0;
+  margin-top: 0.16em;
+  transform: translateX(-0.5em);
+}
+.contact__form label.dsgvo input:checked + span::before {
+  content: "✔";
+  font-size: 0.7em;
+  color: black;
+  position: relative;
+  z-index: 3;
+}
+.contact__form .dsgvo-wrapper {
+  text-align: center;
+}
+.contact__form button {
+  margin-left: auto;
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,152 @@
-.contact{
-    h2{
+.contact {
+    h2 {
         grid-column-end: span 12;
     }
-    &__form{
+
+    &__form {
         grid-column: 2 / span 10;
+
+        // call me crazy,  this is all for the select
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        select {
+            // A reset of styles, including removing the default dropdown arrow
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: auto;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: inherit;
+            line-height: inherit;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            // Stack above custom arrow
+            z-index: 1;
+
+            // Remove dropdown arrow in IE10 & IE11
+            // @link https://www.filamentgroup.com/lab/select-css.html
+            &::-ms-expand {
+                display: none;
+            }
+
+            // Remove focus outline, will add on alternate element
+            outline: none;
+
+            //set new styles
+            display: grid;
+            grid-template-areas: "select";
+            align-items: center;
+            position: relative;
+            padding-right: 2rem;
+
+            cursor: pointer;
+
+        }
+
+        // Custom arrow
+        .select {
+            display: inline-flex;
+            align-items: baseline;
+            position: relative;
+
+            &::after {
+                content: "▾";
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        input,
+        .select {
+            margin: 0;
+            border: none;
+            border-bottom: 2px solid black;
+
+            &[type='text'],
+            &[type='email'] {
+                padding: 2rem;
+                padding-bottom: 1rem;
+                height: 2em;
+                transform: translateY(-1em);
+            }
+        }
+
+        textarea {
+            display: block;
+            width: 80%;
+            margin: 3rem auto;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        p {
+            max-width: unset;
+            text-align: center;
+        }
+
+        label {
+            @include text-regular;
+            @include font-text-regular;
+            text-align: center;
+            display: inline;
+
+            &.dsgvo {
+                text-align: center;
+
+                .checkmark {
+                    border: 2px solid black;
+                    border-radius: 8px;
+                    aspect-ratio: 1 / 1;
+                }
+
+                input {
+                    height: auto;
+                    opacity: 0;
+
+                    &+span {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 1em;
+                        width: 1em;
+                        margin: 0;
+                        margin-top: 0.16em;
+                        transform: translateX(-0.5em);
+                    }
+
+                    &:checked {
+                        &+span::before {
+                            content: '✔';
+                            font-size: 0.7em;
+                            color: black;
+                            position: relative;
+                            z-index: 3;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .dsgvo-wrapper {
+            text-align: center;
+        }
+
+        button {
+            margin-left: auto;
+            margin-top: 3rem;
+        }
+
+
     }
 }
