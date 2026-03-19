@@ -128,6 +128,21 @@ function theme_footer_customizer($wp_customize)
 }
 
 function filter_site_upload_size_limit( $size ) {
-return 1024 * 1024 * 32;
+return 1024 * 1024 * 128;
 }
 add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
+
+// configure external mail server
+
+add_action('phpmailer_init', function ($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = getenv('SMTP_HOST');
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = getenv('SMTP_PORT');
+    $phpmailer->Username   = getenv('SMTP_USER');
+    $phpmailer->Password   = getenv('SMTP_PASS');
+    $phpmailer->SMTPSecure = getenv('SMTP_SECURE');
+
+    $phpmailer->From       = 'info@pebenergy.de';
+    $phpmailer->FromName   = 'PEB Energy';
+});
