@@ -31,7 +31,8 @@ function pebenergy_setup()
 	register_nav_menus(
 		array(
 			'menu-main' => esc_html__('Primary', 'pebenergy'),
-			'footer-menu-left' => __('Footer Links')
+			'footer-menu-left' => esc_html__('Footer Menu', 'pebenergy'),
+			'footer-menu-right' => __('Footer Links') 
 		)
 	);
 
@@ -104,28 +105,6 @@ function pebenergy_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'pebenergy_scripts');
-
-/**
- * Customizer Code HERE
- */
-
-add_action('customize_register', 'theme_footer_customizer');
-function theme_footer_customizer($wp_customize)
-{
-	//adding section in wordpress customizer   
-	$wp_customize->add_section('footer_settings_section', array(
-		'title'          => 'Footer Information'
-	));
-	//adding settings for footer text area
-	$wp_customize->add_setting('footer_settings_text', array(
-		'default'        => 'Footer Text',
-	));
-	$wp_customize->add_control('footer_settings_text', array(
-		'label'   => 'Footer Text',
-		'section' => 'footer_settings_section',
-		'type'    => 'textarea',
-	));
-}
 
 function filter_site_upload_size_limit( $size ) {
 return 1024 * 1024 * 128;

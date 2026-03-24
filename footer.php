@@ -25,19 +25,24 @@ $footer_text = get_theme_mod('footer_settings_text');
         </div>
         <!-- end .footer__site-branding -->
         <!-- start .footer__navigation -->
-        <nav id="footer__navigation" class="footer-navigation content-container">
+        <nav id="footer__navigation" class="footer-navigation">
             <?php
             wp_nav_menu(array(
-                'theme_location' => 'menu-footer',
-                'menu_id' => 'footer-menu',
+                'theme_location' => 'footer-menu-left',
+                'menu_id' => 'footer-menu-left',
             ));
             ?>
         </nav>
         <!-- end .footer__navigation -->
-        <!-- start .footer__text -->
-        <div class="footer__text">
-            <p><?php echo $footer_text ?></p>
-        </div>
+        <!-- start .footer__navigation__two -->
+        <nav id="footer__navigation__two" class="footer-navigation">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'footer-menu-right',
+                'menu_id' => 'footer-menu-right',
+            ));
+            ?>
+        </nav>
         <!-- end .footer__text -->
     </div>
         </div>
