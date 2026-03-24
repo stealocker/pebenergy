@@ -13,7 +13,7 @@
 <?php endif; ?>
     <?php if ( $attributes['button-two'] ) : ?>
     <a href="<?php echo esc_url( $attributes['button-two'] ); ?>"
-       class="button button--secondary">
+       class="button button--secondary" target="_blank">
         Demo ausprobieren
     </a>
 <?php endif; ?>

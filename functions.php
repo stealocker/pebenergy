@@ -143,6 +143,69 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->Password   = getenv('SMTP_PASS');
     $phpmailer->SMTPSecure = getenv('SMTP_SECURE');
 
-    $phpmailer->From       = 'info@pebenergy.de';
+    $phpmailer->From       = 'notifications@pebenergy.de';
     $phpmailer->FromName   = 'PEB Energy';
+
+	$phpmailer->SMTPDebug = 0; // 0 = off, 1 = client messages, 2 = client + server
 });
+
+// // Enqueue JS and localize AJAX URL
+function my_contact_form_scripts() {
+    wp_enqueue_script(
+        'contact-form-js',
+        get_template_directory_uri() . '/js/contact-form.js', // adjust path
+        array('jquery'),
+        null,
+        true
+    );
+
+    wp_localize_script('contact-form-js', 'contact_form', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'my_contact_form_scripts');
+
+// Handle AJAX request
+function contact_form_callback() {
+    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+    $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+    $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+	$inquiry = isset($_POST['inquiry']) ? sanitize_text_field($_POST['inquiry']) : '';
+
+
+// test mail
+$to      = 'info@pebenergy.de';
+$subject = 'Neue PEB Website Anfrage zum Thema: ' . $inquiry;
+$message = "Liebes PEB Team,\n\n" . 
+$name . " hat euch eine neue Nachricht geschickt. Hier die Details:\n\n" . 
+"Name: $name\n" . 
+"Mailadresse: $email\n" . 
+"Anliegen: $inquiry\n" . 
+"Nachricht: $message\n\n" . 
+"Ihr könnt einfach auf diese Mail antworten und kommt bei $name raus.\n\n" . 
+"Liebe Grüße,\n" . 
+"Euer Kontaktformular";
+$headers = array(
+    'From: notifications@pebenergy.de',
+    'Reply-To: ' . $email
+);
+
+// Use wp_mail instead of mail()
+$sent = wp_mail($to, $subject, $message, $headers);
+
+if($sent){
+	$mailsend = true;
+
+} else {
+$mailsend = false;
+}
+
+    // Example: just return the data for testing
+    wp_send_json_success(array(
+		'mailsend' => $mailsend,
+        'inquiry' => $inquiry
+    ));
+}
+
+add_action('wp_ajax_contact_form', 'contact_form_callback');
+add_action('wp_ajax_nopriv_contact_form', 'contact_form_callback');
