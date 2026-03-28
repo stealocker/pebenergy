@@ -6,6 +6,10 @@
     &__form {
         grid-column: 2 / span 10;
 
+        p {
+            line-height: 2em;
+        }
+
         // call me crazy,  this is all for the select
         *,
         *::before,
@@ -47,9 +51,14 @@
             align-items: center;
             position: relative;
             padding-right: 2rem;
+            color: black;
 
             cursor: pointer;
 
+            &:focus-visible {
+                outline: 3px solid Highlight;
+                outline-offset: 3px;
+            }
         }
 
         // Custom arrow
@@ -76,7 +85,7 @@
                 padding: 2rem;
                 padding-bottom: 1rem;
                 height: 2em;
-                transform: translateY(-1em);
+                transform: translateY(-0.4em);
             }
         }
 
@@ -112,7 +121,10 @@
                 input {
                     height: auto;
                     opacity: 0;
-
+&:focus-visible+.checkmark {
+                    outline: 3px solid Highlight;
+                    outline-offset: 3px;
+                }
                     &+span {
                         display: inline-flex;
                         align-items: center;
@@ -148,5 +160,14 @@
         }
 
 
+    }
+}
+
+// mobile down
+@media screen and (max-width: $breakpoint-m-width) {
+    .contact {
+        &__form {
+            grid-column: 1 / span 12;
+        }
     }
 }

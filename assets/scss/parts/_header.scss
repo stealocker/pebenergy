@@ -5,6 +5,7 @@
     padding-bottom: $spacing-s;
     width: 100%;
     z-index: 9999;
+
     .site-header__container {
         width: 100%;
         grid-template-columns: 15% auto auto;
@@ -27,7 +28,7 @@
         .site-navigation-wrapper {
             grid-area: nav;
 
-            ul li a:hover{
+            ul li a:hover {
                 text-decoration: underline;
                 text-decoration-color: $color-turquoise;
                 text-decoration-thickness: 2px;
@@ -51,19 +52,31 @@
                 align-items: center;
                 margin: 0;
                 padding: 0;
-                li{
+
+                li {
                     margin: 0;
-                    a{
+
+                    a {
                         color: black;
                     }
-                    &.menulink--background{
+
+                    &.menulink--background {
                         background-color: $color-darkblue;
                         border-radius: 8px;
                         padding: 0.8rem;
-                       a{
-                        color: white;
+
+                        a {
+                            color: white;
                             font-variation-settings: "wght" 600;
-                       } 
+                        }
+
+                        &:hover {
+                            transform: scale(1.02);
+
+                            a {
+                                text-decoration: none;
+                            }
+                        }
                     }
                 }
             }
@@ -94,24 +107,31 @@
                     background-color: white;
                     position: relative;
                     margin: 0;
+                    border: none;
                 }
             }
 
             .navigation-overlay {
                 position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                top: 10rem;
+                left: $spacing-s;
+                right: $spacing-s;
                 background-color: white;
                 z-index: 99;
+                border-radius: 8px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
                 &--hidden {
                     display: none;
                 }
 
                 &--open {
-                    display: block;
+                    display: block !important;
+                }
+
+                nav {
+                    padding-top: 0;
+                    padding-bottom: 0;
                 }
 
                 #primary-menu {
@@ -119,13 +139,48 @@
                     overflow-y: auto;
 
                     li {
-                        padding: $spacing-s 0;
+                        padding: 1rem 0;
 
                         a {
                             @include text-bigger;
+                            color: black;
+                        }
+
+                        &.menulink--background {
+                            background-color: $color-darkblue;
+                            border-radius: 8px;
+                            padding: 0.8rem;
+                            width: fit-content;
+                            width: -moz-fit-content;
+                            width: -webkit-fit-content;
+
+                            a {
+                                color: white;
+                                font-variation-settings: "wght" 600;
+                            }
+
+                            &:hover {
+                                transform: scale(1.02);
+
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// Mobile down
+@media screen and (max-width: $breakpoint-s-width) {
+    #site-header {
+        .site-header__container {
+            .navigation-overlay {
+                left: $spacing-mobile;
+                right: $spacing-mobile;
             }
         }
     }

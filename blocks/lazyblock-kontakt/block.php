@@ -12,8 +12,8 @@
         </p>
         <label for="message"></label>
         <textarea id="message" name="message" rows="5"></textarea>
-        <div class="dsgvo-wrapper"><label class="dsgvo" for="dsgvo">Bevor ihr fragt, ja ich habe die <a href="<?php echo esc_url($attributes['link']); ?>">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner personenbezogenen Daten einverstanden, deshalb setze ich hier mein Häkchen: <input type="checkbox" id="dsgvo" name="dsgvo" required><span class="checkmark"></span></label></div>
-        <button class="button--primary" type="submit">Senden</button>
+        <div class="dsgvo-wrapper"><label class="dsgvo" for="dsgvo">Bevor ihr fragt, ja ich habe die <a href="<?php echo esc_url($attributes['link']); ?>">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner personenbezogenen Daten einverstanden, deshalb setze ich hier mein Häkchen: <input type="checkbox" id="dsgvo" name="dsgvo" required tabindex="0"><span class="checkmark"></span></label></div>
+        <button class="button--primary" type="submit" tabindex="0">Senden</button>
     </form>
 </section>
 

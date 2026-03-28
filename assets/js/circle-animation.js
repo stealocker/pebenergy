@@ -64,11 +64,26 @@ function createSegments() {
   }
 }
 
+const mediaQuery = window.matchMedia('(max-width: 560px)');
+
+function setDistances(e) {
+    if (e.matches) {
+        distancex = 120;
+        distancey = 60;
+    } else {
+        distancex = 200;
+        distancey = 120;
+    }
+}
+
+let distancex, distancey;
+
+setDistances(mediaQuery);
+mediaQuery.addEventListener('change', setDistances);
+
 function moveText(index) {
 
 const angle = midAngles[index] - 180;
-const distancex = 200;
-const distancey = 120;
 
 const rad = angle * Math.PI / 180;
 

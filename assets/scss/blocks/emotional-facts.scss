@@ -17,6 +17,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            position: relative;
         }
     }
 
@@ -103,5 +104,43 @@
             grid-area: img2;
             aspect-ratio: 20 / 9;
         }
+    }
+}
+
+// tablet down
+@media screen and (max-width: $breakpoint-m-width) {
+    .emotional-facts {
+        grid-template-areas: "headline headline headline headline headline headline headline headline fact1 fact1 fact1 fact1"
+            "space2 space2 fact2 fact2 fact2 fact2 img1 img1 img1 img1 img1 img1"
+            "space3 fact3 fact3 fact3 fact3 fact3 img1 img1 img1 img1 img1 img1"
+            "img2 img2 img2 img2 space5 fact4 fact4 fact4 fact4 fact4 fact4 sapce6"
+            "img2 img2 img2 img2 space7 space7 space7 space7 fact5 fact5 fact5 fact5";
+        row-gap: 8rem;
+        background-position: -32rem 0rem;
+        background-size: 180%;
+        background-repeat: repeat-y;
+
+        &__img {
+            &:nth-child(7) {
+                aspect-ratio: 1 / 1;
+            }
+
+            &:nth-child(8) {
+                aspect-ratio: 7 / 9;
+            }
+        }
+    }
+}
+
+// mobile down
+@media screen and (max-width: $breakpoint-sm-width) {
+    .emotional-facts {
+        grid-template-areas: "headline headline headline headline headline headline headline headline headline headline headline headline"
+            "space1 space1 space1 space1 fact1 fact1 fact1 fact1 fact1 fact1 fact1 fact1"
+            "space2 fact2 fact2 fact2 fact2 fact2 img1 img1 img1 img1 img1 img1"
+            "fact3 fact3 fact3 fact3 fact3 space4 img1 img1 img1 img1 img1 img1"
+            "img2 img2 img2 img2 space5 fact4 fact4 fact4 fact4 sapce6 sapce6 sapce6"
+            "img2 img2 img2 img2 space7 space7 space7 fact5 fact5 fact5 fact5 fact5";
+
     }
 }

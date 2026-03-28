@@ -60,18 +60,35 @@
     }
 }
 
+// small desktop down
+@media screen and (max-width: $breakpoint-ml-width) {
+#site-footer {
+    .footer-wrapper {
+        grid-template-areas: "logo logo logo space space nav nav nav navtwo navtwo navtwo navtwo";
+    }
+}
+}
+
 // Tablet down
 @media screen and (max-width: $breakpoint-m-width) {
     #site-footer {
         padding-top: $spacing-m;
         padding-bottom: $spacing-m;
 
-        .footer-wrapper {
-            display: block;
+     .footer-wrapper {
+        grid-template-areas: "space space space logo logo logo logo logo logo space2 space2 space2" "nav nav nav nav nav space3 navtwo navtwo navtwo navtwo navtwo navtwo";
+    }
+    }
+}
 
-            .footer__site-branding {
-                margin-bottom: $spacing-s;
-            }
-        }
+// mobile down
+@media screen and (max-width: $breakpoint-sm-width) {
+    #site-footer {
+        padding-top: $spacing-m;
+        padding-bottom: $spacing-m;
+
+     .footer-wrapper {
+        grid-template-areas: "space logo logo logo logo logo logo logo logo logo logo space2" "nav nav nav nav nav nav nav nav nav nav nav nav" "navtwo navtwo navtwo navtwo navtwo navtwo navtwo navtwo navtwo navtwo navtwo navtwo";
+    }
     }
 }

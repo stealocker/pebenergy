@@ -40,6 +40,12 @@ h1,
 .h1 {
     @include font-text-display;
     @include text-h1;
+@media screen and (max-width: $breakpoint-sm-width) {
+    font-size: 32px;
+    span{
+        font-size: 32px!important;
+    }
+}
 }
 
 h2,

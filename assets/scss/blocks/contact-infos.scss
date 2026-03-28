@@ -18,3 +18,16 @@
         }
     }
 }
+
+// tablet down
+@media screen and (max-width: $breakpoint-m-width) {
+    .contact-info {
+    grid-template-areas: "address address address address address address address contact contact contact contact contact";
+    }
+}
+// mobile down
+@media screen and (max-width: $breakpoint-sm-width) {
+    .contact-info {
+    grid-template-areas: "address address address address address address address address address address address address" "contact contact contact contact contact contact contact contact contact contact contact contact";
+    }
+}

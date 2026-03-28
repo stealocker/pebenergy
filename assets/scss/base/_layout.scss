@@ -42,11 +42,11 @@
         padding-bottom: $spacing-l;
     }
     @media screen and (max-width: $breakpoint-m-width) {
-        padding-top: $spacing-m;
+        padding-top: 0;
         padding-bottom: $spacing-m;
     }
     @media screen and (max-width: $breakpoint-s-width) {
-        padding-top: $spacing-s;
+        padding-top: 0;
         padding-bottom: $spacing-s;
     }
 }

@@ -1,6 +1,7 @@
 .descriptions {
     grid-template-areas: "overview overview overview overview overview space detail detail detail detail detail detail";
     margin-top: 14rem;
+
     &__overview {
         grid-area: overview;
 
@@ -9,6 +10,7 @@
             align-items: center;
             gap: 1rem;
             margin-bottom: 2rem;
+
             p {
                 margin: 0;
             }
@@ -52,8 +54,9 @@
                 }
             }
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
+
                 p {
                     font-variation-settings: "wght" 600;
                 }
@@ -84,6 +87,27 @@
             &--active {
                 display: block;
             }
+        }
+    }
+}
+
+// tablet down
+@media screen and (max-width: $breakpoint-m-width) {
+    .descriptions {
+        grid-template-areas: "overview overview overview overview overview overview overview overview overview overview overview overview" "detail detail detail detail detail detail detail detail detail detail detail detail";
+
+        &__overview {
+            grid-area: overview;
+
+            .descriptions__overview__item {
+
+                &--active {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__detail {
+            margin-top: 2rem;
         }
     }
 }

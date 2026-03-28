@@ -78,3 +78,30 @@
         }
     }
 }
+
+// tablet down
+@media screen and (max-width: $breakpoint-m-width) {
+    .showcases {
+    &__content-wrapper {
+        .showcases__content {
+            grid-column-end: span 6;
+        }
+    }
+}
+
+}
+
+// mobile down
+@media screen and (max-width: $breakpoint-sm-width) {
+    .showcases {
+    &__content-wrapper {
+        .showcases__content {
+            grid-column-end: span 12;
+            .showcases__content__img {
+                aspect-ratio: 9 / 10;
+            }
+        }
+    }
+}
+
+}
