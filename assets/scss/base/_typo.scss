@@ -58,12 +58,14 @@ h3,
 .h3 {
     @include font-text-mono;
     @include text-h3;
+    font-variation-settings: "wght" 550;
 }
 
 h4,
 .h4 {
     @include font-text-display;
     @include text-h4;
+    font-variation-settings: "wght" 500;
 }
 
 h5,

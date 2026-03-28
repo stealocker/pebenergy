@@ -9,7 +9,7 @@
                     foreach ($items as $index => $item) : 
                     $active = $index === 0 ? ' descriptions__overview__item--active' : '';?>
                         <div class="descriptions__overview__item<?php echo $active ?>" data-id="<?php echo $id ?>">
-                            <p class="text-bigger"><?php echo esc_html($item['headline']); ?></p>
+                            <p class="text-bigger" tabindex="0"><?php echo esc_html($item['headline']); ?></p>
                             <div class="line"></div>
                     </div>
                     <?php

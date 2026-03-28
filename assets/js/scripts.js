@@ -44,6 +44,12 @@
                     }
 
                 });
+                item.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault(); // prevents page scroll on space
+                        item.click(); // reuse your existing click handler
+                    }
+                });
 
             });
 
