@@ -1,7 +1,5 @@
 .circle-diagram {
     grid-template-areas: "text text text text text space circle circle circle circle circle circle";
-    margin-top: 8rem;
-    margin-bottom: 8rem;
     &__text {
         grid-area: text;
         a{

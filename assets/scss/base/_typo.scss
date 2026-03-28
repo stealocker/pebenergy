@@ -177,3 +177,39 @@ a:hover {
         }
     }
 }
+
+.link {
+    &--color {
+        &-lilac {
+            color: black;
+            text-decoration: underline;
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.3em;
+            text-decoration-color: $color-lilac;
+
+            &:hover {
+                transform: scale(1.02);
+                text-decoration: underline;
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.3em;
+                text-decoration-color: $color-lilac;
+            }
+        }
+
+        &-blue {
+            color: black;
+            text-decoration: underline;
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.3em;
+            text-decoration-color: $color-blue;
+
+            &:hover {
+                transform: scale(1.02);
+                text-decoration: underline;
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.3em;
+                text-decoration-color: $color-blue;
+            }
+        }
+    }
+}

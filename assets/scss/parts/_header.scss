@@ -7,7 +7,7 @@
     z-index: 9999;
     .site-header__container {
         width: 100%;
-        grid-template-columns: 20% auto auto;
+        grid-template-columns: 15% auto auto;
         grid-template-areas: "logo space nav";
         gap: $spacing-s;
         align-items: center;
@@ -19,6 +19,9 @@
 
         .site-branding {
             grid-area: logo;
+            max-width: 130px;
+            align-self: center;
+            margin-top: 0.8rem;
         }
 
         .site-navigation-wrapper {

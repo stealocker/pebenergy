@@ -508,6 +508,35 @@ a:hover {
   margin-left: 1.5em;
 }
 
+.link--color-lilac {
+  color: black;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #C8BBE9;
+}
+.link--color-lilac:hover {
+  transform: scale(1.02);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #C8BBE9;
+}
+.link--color-blue {
+  color: black;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #72F9F5;
+}
+.link--color-blue:hover {
+  transform: scale(1.02);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #72F9F5;
+}
+
 *,
 div,
 :after,
@@ -519,6 +548,10 @@ div,
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
   vertical-align: top;
+}
+
+section {
+  margin-bottom: 12rem;
 }
 
 html {
@@ -696,7 +729,7 @@ input {
 }
 #site-header .site-header__container {
   width: 100%;
-  grid-template-columns: 20% auto auto;
+  grid-template-columns: 15% auto auto;
   grid-template-areas: "logo space nav";
   gap: 21px;
   align-items: center;
@@ -707,6 +740,9 @@ input {
 }
 #site-header .site-header__container .site-branding {
   grid-area: logo;
+  max-width: 130px;
+  align-self: center;
+  margin-top: 0.8rem;
 }
 #site-header .site-header__container .site-navigation-wrapper {
   grid-area: nav;
@@ -812,6 +848,8 @@ input {
 }
 #site-footer .footer-wrapper .footer__site-branding {
   grid-area: logo;
+  margin-top: 3rem;
+  padding: 3rem;
 }
 #site-footer .footer-wrapper #footer__navigation {
   grid-area: nav;
@@ -894,8 +932,6 @@ input {
 
 .circle-diagram {
   grid-template-areas: "text text text text text space circle circle circle circle circle circle";
-  margin-top: 8rem;
-  margin-bottom: 8rem;
 }
 .circle-diagram__text {
   grid-area: text;
@@ -978,8 +1014,7 @@ input {
 
 .descriptions {
   grid-template-areas: "overview overview overview overview overview space detail detail detail detail detail detail";
-  margin-top: 12rem;
-  margin-bottom: 8rem;
+  margin-top: 14rem;
 }
 .descriptions__overview {
   grid-area: overview;
@@ -1051,6 +1086,7 @@ input {
   background-repeat: no-repeat;
   background-position: 0 18rem;
   background-size: 75%;
+  margin-bottom: 14rem;
 }
 .emotional-facts__headline {
   grid-area: headline;
@@ -1128,10 +1164,6 @@ input {
   aspect-ratio: 20/9;
 }
 
-.showcases {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
 .showcases__content-wrapper {
   align-items: start;
 }
@@ -1382,6 +1414,25 @@ input {
 .contact__form button {
   margin-left: auto;
   margin-top: 3rem;
+}
+
+.contact-info {
+  grid-template-areas: "space address address address address address address space2 contact contact contact space3";
+}
+.contact-info__address {
+  grid-area: address;
+}
+.contact-info__address * {
+  margin: 0;
+  margin-top: 2rem;
+}
+.contact-info__contact {
+  grid-area: contact;
+}
+.contact-info__contact a {
+  display: block;
+  margin: 0;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

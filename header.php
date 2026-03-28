@@ -30,7 +30,7 @@
                 <!-- start .site-branding -->
                 <div class="site-branding">
                     <?php 
-                    if(the_custom_logo()){
+                    if(has_custom_logo()){
                         the_custom_logo();
                     }
                     else{ ?>

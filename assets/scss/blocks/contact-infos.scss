@@ -1,0 +1,20 @@
+.contact-info {
+    grid-template-areas: "space address address address address address address space2 contact contact contact space3";
+
+    &__address {
+        grid-area: address;
+        *{
+            margin: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    &__contact {
+        grid-area: contact;
+        a{
+            display: block;
+            margin: 0;
+            margin-top: 2rem;
+        }
+    }
+}
