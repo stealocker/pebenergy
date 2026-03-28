@@ -17,7 +17,7 @@ get_header();
             404
         </h1>
         <h3><?php echo __('Hier gibt es nichts zu sehen, gehen Sie bitte weiter.', 'pebenergy'); ?></h3>
-        <a href="<?php echo home_url(); ?>"><?php echo __('Zurück zur Startseite', 'pebenergy'); ?></a>
+        <a href="<?php echo home_url(); ?>" tabindex="0"><?php echo __('Zurück zur Startseite', 'pebenergy'); ?></a>
         </div>
         <div class="404-wrapper__inner">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/404.gif">

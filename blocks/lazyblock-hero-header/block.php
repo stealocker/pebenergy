@@ -7,13 +7,13 @@
 <div class="hero-header__buttonwrapper">
     <?php if ( $attributes['button-one'] ) : ?>
     <a href="<?php echo esc_url( $attributes['button-one'] ); ?>"
-       class="button button--primary">
+       class="button button--primary" tabindex="0">
         Jetzt unverbindlich anfragen
     </a>
 <?php endif; ?>
     <?php if ( $attributes['button-two'] ) : ?>
     <a href="<?php echo esc_url( $attributes['button-two'] ); ?>"
-       class="button button--secondary" target="_blank">
+       class="button button--secondary" target="_blank" tabindex="0">
         Demo ausprobieren
     </a>
 <?php endif; ?>

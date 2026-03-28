@@ -22,7 +22,7 @@
     <?php wp_body_open(); ?>
     <!-- start #page -->
     <div id="page" class="site">
-        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'pebenergy'); ?></a>
+        <a class="skip-link screen-reader-text" href="#primary" tabindex="0"><?php esc_html_e('Skip to content', 'pebenergy'); ?></a>
         <!-- start #site-header -->
         <header id="site-header" class="site-header">
             <div class="content-container">
@@ -34,14 +34,14 @@
                         the_custom_logo();
                     }
                     else{ ?>
-                    <a href="<?php echo home_url(); ?>">Startseite</a> 
+                    <a href="<?php echo home_url(); ?>" tabindex="0">Startseite</a> 
                     <?php } ?>
                 </div>
                 <!-- end .site-branding -->
                 <!-- start .site-navigation-wrapper -->
                 <div class="site-navigation-wrapper mobile-toggle-wrapper">
                     <!-- start #menu-toggle -->
-                    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" tabindex="0">
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/menu-open.svg" alt="icon menu toggle">
                     </button>
                     <!-- end #menu-toggle -->
@@ -55,7 +55,7 @@
                             ));
                             ?>
                         </nav>
-                        <a class="skip-link screen-reader-text accessibility--menu-close" onkeydown="menuToggleKeyDown(event)" href=""><?php echo __('Menü schließen', 'pebenergy'); ?></a>
+                        <a class="skip-link screen-reader-text accessibility--menu-close" onkeydown="menuToggleKeyDown(event)" href="" tabindex="0"><?php echo __('Menü schließen', 'pebenergy'); ?></a>
                     </div>
                     <!-- end .navigation-overlay -->
                      <div class="navigation-desktop">

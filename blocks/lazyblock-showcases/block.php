@@ -23,7 +23,7 @@
         <div class="showcases__content showcases__content--cta">
             <div class="showcases__content__img flex">
                 <h3>Sie und wir,<br>wär das was?</h3>
-                <a class="button button--primary" href="#kontakt">Jetzt unverbindlich anfragen</a>
+                <a class="button button--primary" href="#kontakt" tabindex="0">Jetzt unverbindlich anfragen</a>
             </div>
         </div>
 

@@ -3,7 +3,7 @@
         <h2><?php echo esc_html($attributes['headline']); ?></h2>
         <p class="text-bigger"><?php echo esc_html($attributes['subline']); ?></p>
         <p><?php echo $attributes['text']; ?></p>
-        <a class="link--arrow" href="<?php echo esc_url($attributes['link']); ?>">Zur technischen Produktbeschreibung</a>
+        <a class="link--arrow" href="<?php echo esc_url($attributes['link']); ?>" tabindex="0">Zur technischen Produktbeschreibung</a>
     </div>
     <div class="circle-diagram__circle">
         <div class="circle-widget">

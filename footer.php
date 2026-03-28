@@ -16,7 +16,7 @@ $footer_text = get_theme_mod('footer_settings_text');
         <div class="footer-wrapper grid">
             <!-- start .footer__site-branding -->
             <div class="footer__site-branding">
-                    <a href="<?php echo home_url(); ?>">
+                    <a href="<?php echo home_url(); ?>" tabindex="0">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.svg">
                     </a>
             </div>
