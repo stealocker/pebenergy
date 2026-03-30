@@ -15,6 +15,20 @@
     const button_img = button.getElementsByTagName('img')[0];
     const menu_overlay = document.getElementsByClassName('navigation-overlay')[0];
 
+    const menuLinks = siteNavigation.querySelectorAll('a');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Only close if menu is open
+        if (button.getAttribute('aria-expanded') === 'true') {
+           button.setAttribute('aria-expanded', 'false');
+            menu_overlay.classList.add('navigation-overlay--hidden');
+            menu_overlay.classList.remove('navigation-overlay--open');
+            button_img.src = pebenergy_scripts.templateUrl + "/assets/img/menu-open.svg";
+        }
+    });
+});
+
     // Return early if the button doesn't exist.
     if ('undefined' === typeof button) {
         return;
