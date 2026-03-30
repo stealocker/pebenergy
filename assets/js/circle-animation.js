@@ -68,8 +68,8 @@ const mediaQuery = window.matchMedia('(max-width: 560px)');
 
 function setDistances(e) {
     if (e.matches) {
-        distancex = 120;
-        distancey = 60;
+        distancex = 130;
+        distancey = 70;
     } else {
         distancex = 200;
         distancey = 120;
