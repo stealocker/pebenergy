@@ -23,8 +23,8 @@
 
     &__fact {
         align-self: center;
-        position: relative;
-
+position: relative;
+z-index: 2;
         .text-super {
             margin: 0;
         }

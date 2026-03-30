@@ -1,6 +1,9 @@
 html {
     font-size: calc(#{8px} + #{strip-unit(4px)} * ((100vw - #{$breakpoint-s-width}) / #{strip-unit($breakpoints-max-diff)}));
     line-height: 1.3;
+    @media screen and (max-width: $breakpoint-xl-width) {
+    font-size: 12px;
+    }
 }
 
 div,

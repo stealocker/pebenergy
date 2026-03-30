@@ -201,8 +201,8 @@ img.avatar {
   width: 100vw;
   background: url(../img/background-top.svg);
   background-repeat: no-repeat;
-  background-position: 90% -5.5rem;
-  background-size: 48%;
+  background-position: 45vw -4.5rem;
+  background-size: 53vw;
 }
 
 .site-main {
@@ -264,6 +264,11 @@ img.avatar {
 html {
   font-size: calc(8px + 4 * (100vw - 375px) / 1545);
   line-height: 1.3;
+}
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 div,
@@ -1215,6 +1220,7 @@ input {
 .emotional-facts__fact {
   align-self: center;
   position: relative;
+  z-index: 2;
 }
 .emotional-facts__fact .text-super {
   margin: 0;
@@ -1380,6 +1386,19 @@ input {
     aspect-ratio: 9/10;
   }
 }
+.team {
+  position: relative;
+}
+.team::before {
+  content: "";
+  position: absolute;
+  top: 20rem;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 60%;
+  background-image: url("../img/background-team.svg");
+  background-repeat: repeat-x;
+}
 .team h2 {
   grid-column: span 12;
 }
@@ -1405,6 +1424,7 @@ input {
 }
 .team__member-wrapper .teammember--one:hover {
   grid-column-start: 1;
+  background-color: white;
 }
 .team__member-wrapper .teammember--two {
   grid-column-start: 7;
@@ -1413,6 +1433,9 @@ input {
 }
 .team__member-wrapper .teammember--two .teammember__img-wrapper {
   grid-column-start: 1;
+}
+.team__member-wrapper .teammember--two:hover {
+  background-color: white;
 }
 .team__member-wrapper .teammember__img-wrapper {
   grid-area: img;
